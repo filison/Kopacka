@@ -1,113 +1,155 @@
 
-:root {
-  --primary: #f4c542;
-  --bg: #1f1f1f;
-  --text: #ffffff;
-  --accent: #333;
-}
-
+/* Základní nastavení */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff; /* světle modrá */
+  color: #003366; /* tmavě modrá */
+  line-height: 1.6;
 }
 
 a {
-  color: var(--primary);
+  color: #003366;
   text-decoration: none;
-  transition: 0.3s ease;
 }
 
 a:hover {
-  color: #fff;
+  text-decoration: underline;
 }
 
+/* Hlavička */
 .header {
+  background-color: #0077cc;
+  color: white;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--accent);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
-.logo a {
+.logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: white;
 }
 
-.nav {
-  position: relative;
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
 }
 
 .hamburger {
   display: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
-  color: var(--primary);
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links li a {
-  font-size: 1rem;
-}
-
-.hero {
-  text-align: center;
-  padding: 3rem 1rem;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #ccc;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive */
+/* Responzivní menu */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
   .nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: var(--accent);
-    flex-direction: column;
-    width: 200px;
     display: none;
-    padding: 1rem;
+    flex-direction: column;
+    background-color: #0077cc;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 15px;
+    border-radius: 5px;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-links li {
-    margin-bottom: 1rem;
+  .hamburger {
+    display: block;
+    color: white;
+  }
+}
+
+/* Obsah stránky */
+.content {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 0.5s ease-in;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Formulář */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #0077cc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Tlačítko */
+.btn {
+  display: inline-block;
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+/* Animace */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
