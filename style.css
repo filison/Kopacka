@@ -83,3 +83,10 @@ ul {
   from {opacity: 0; transform: translateY(-20px);}
   to {opacity: 1; transform: translateY(0);}
 }
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+.logo a:hover {
+  color: #ffd700;
+}
