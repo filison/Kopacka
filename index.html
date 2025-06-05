@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kopačka.cz</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopačka.cz – Domů</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="header">
-    <div class="logo">
-      <a href="index.html">Kopačka.cz</a>
-    </div>
-    <nav class="nav">
-      <div class="hamburger" id="hamburger">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Domů</a></li>
-        <li><a href="cenik.html">Ceník</a></li>
-        <li><a href="galerie.html">Galerie</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
+    <a href="index.html" class="logo">Kopačka.cz</a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="nav-links" class="nav-links">
+      <a href="index.html">Domů</a>
+      <a href="cenik.html">Ceník</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
 
-  <main class="hero">
+  <main class="content">
     <h1>Vítejte u nás!</h1>
-    <p>Zajišťujeme profesionální ruční výkopové práce.<br />Rychle, levně a poctivě.</p>
+    <p>Zajišťujeme profesionální ruční výkopové práce. <br> Rychle, levně a poctivě.</p>
   </main>
 
   <script>
-    document.getElementById("hamburger").onclick = () => {
+    function toggleMenu() {
       document.getElementById("nav-links").classList.toggle("active");
-    };
+    }
   </script>
 </body>
 </html>
