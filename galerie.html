@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galerie | Kopačka.cz</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie – Kopačka.cz</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo"><a href="index.html">Kopačka.cz</a></div>
-    <div class="menu-toggle">☰</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Domů</a></li>
-        <li><a href="cenik.html">Ceník</a></li>
-        <li><a href="galerie.html">Galerie</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
+  <header class="header">
+    <a href="index.html" class="logo">Kopačka.cz</a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="nav-links" class="nav-links">
+      <a href="index.html">Domů</a>
+      <a href="cenik.html">Ceník</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
-  <main>
+
+  <main class="content">
     <h1>Galerie</h1>
-    <p>Fotky našich realizací. Brzy doplníme více!</p>
+    <p>Ukázky našich dokončených projektů již brzy přidáme.</p>
   </main>
-  <script src="script.js"></script>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
