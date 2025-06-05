@@ -2,16 +2,18 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kopačka.cz – Ruční výkopové práce</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kopačka.cz</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="logo"><a href="index.html">Kopačka.cz</a></div>
-    <div class="menu-toggle">☰</div>
-    <nav>
-      <ul>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">Kopačka.cz</a>
+    </div>
+    <nav class="nav">
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Domů</a></li>
         <li><a href="cenik.html">Ceník</a></li>
         <li><a href="galerie.html">Galerie</a></li>
@@ -19,10 +21,16 @@
       </ul>
     </nav>
   </header>
-  <main>
+
+  <main class="hero">
     <h1>Vítejte u nás!</h1>
-    <p>Zajišťujeme profesionální ruční výkopové práce. Rychle, levně a poctivě.</p>
+    <p>Zajišťujeme profesionální ruční výkopové práce.<br />Rychle, levně a poctivě.</p>
   </main>
-  <script src="script.js"></script>
+
+  <script>
+    document.getElementById("hamburger").onclick = () => {
+      document.getElementById("nav-links").classList.toggle("active");
+    };
+  </script>
 </body>
 </html>
