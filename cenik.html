@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ceník | Kopačka.cz</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceník – Kopačka.cz</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">Kopačka.cz</a>
-      <button class="hamburger" id="hamburger">&#9776;</button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Domů</a></li>
-        <li><a href="cenik.html">Ceník</a></li>
-        <li><a href="galerie.html">Galerie</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="poptavka.html">Poptávka</a></li>
-      </ul>
+  <header class="header">
+    <a href="index.html" class="logo">Kopačka.cz</a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="nav-links" class="nav-links">
+      <a href="index.html">Domů</a>
+      <a href="cenik.html">Ceník</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
 
-  <main class="container">
-    <h1>Ceník výkopových prací</h1>
-    <p>Ceny jsou orientační a mohou se lišit podle konkrétních podmínek. Konečná cena bude stanovena individuálně po obhlídce.</p>
-
-    <table class="pricing-table">
-      <tr><th>Typ výkopu</th><th>Cena od (Kč/m)</th></tr>
-      <tr><td>Měkká půda (např. zahradní hlína)</td><td>200 Kč</td></tr>
-      <tr><td>Středně tvrdá půda (např. jílovitá hlína)</td><td>250 Kč</td></tr>
-      <tr><td>Tvrdá půda (např. kamenitá, zhutnělá zemina)</td><td>300–350 Kč</td></tr>
-      <tr><td>Výkopy u zdí nebo základů</td><td>+50 % k základní ceně</td></tr>
-      <tr><td>Ruční odvoz zeminy (kára, kolečko)</td><td>Individuálně</td></tr>
-    </table>
+  <main class="content">
+    <h1>Ceník</h1>
+    <ul>
+      <li>Normální zemina – od 350 Kč/m³</li>
+      <li>Tvrdá půda (štěrk, suť) – od 490 Kč/m³</li>
+      <li>Skalnatý terén – individuálně dle domluvy</li>
+    </ul>
+    <p>Výsledná cena se odvíjí dle náročnosti, tvrdosti půdy a rozlohy výkopu.</p>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Kopačka.cz | Ruční výkopové práce</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
