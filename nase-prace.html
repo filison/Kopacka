@@ -2,54 +2,36 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naše práce | Kopačka.cz</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Naše práce – Kopačka.cz</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" type="image/png" href="favicon.png"/>
 </head>
 <body>
-  <header class="header">
-    <a href="index.html" class="logo">Kopačka.cz</a>
-    <nav class="navbar" id="navbar">
-      <a href="index.html">Domů</a>
-      <a href="cenik.html">Ceník</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="nase-prace.html" class="active">Naše práce</a>
+  <header>
+    <h1><a href="index.html">Kopačka.cz</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="cenik.html">Ceník</a></li>
+        <li><a href="nase-prace.html" class="active">Naše práce</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
     </nav>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
 
-  <main class="main-content">
-    <section id="nase-prace" class="section">
-      <h1>Naše práce</h1>
-      <p>Podívejte se na ukázky naší poctivé ruční práce v terénu.</p>
-      
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="images/prace1.jpg" alt="Výkop základů">
-          <p>Výkop základů pro rodinný dům, Mělník</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/prace2.jpg" alt="Příprava pro inženýrské sítě">
-          <p>Příprava výkopu pro inženýrské sítě, Praha</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/prace3.jpg" alt="Úprava terénu">
-          <p>Úprava terénu a odvodnění, Kladno</p>
-        </div>
-      </div>
-    </section>
+  <main class="container">
+    <h2>Naše práce</h2>
+    <p>Podívejte se na ukázky našich ručně vykopaných projektů. Žádná výzva pro nás není problém!</p>
+
+    <div class="gallery">
+      <img src="CCE02543-F686-47C1-8BE2-1055D66CB13B.jpeg" alt="Výkop v lese"/>
+      <img src="F8A15412-5B75-498D-992D-F494523B7ED7.jpeg" alt="Výkop v interiéru"/>
+    </div>
   </main>
 
-  <footer class="footer">
+  <footer>
     <p>&copy; 2025 Kopačka.cz – Ruční výkopové práce</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      const navbar = document.getElementById('navbar');
-      navbar.classList.toggle('active');
-    }
-  </script>
 </body>
 </html>
