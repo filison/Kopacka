@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naše práce | Kopačka.cz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">Kopačka.cz</a>
+    <nav class="navbar" id="navbar">
+      <a href="index.html">Domů</a>
+      <a href="cenik.html">Ceník</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="nase-prace.html" class="active">Naše práce</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <main class="main-content">
+    <section id="nase-prace" class="section">
+      <h1>Naše práce</h1>
+      <p>Podívejte se na ukázky naší poctivé ruční práce v terénu.</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/prace1.jpg" alt="Výkop základů">
+          <p>Výkop základů pro rodinný dům, Mělník</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/prace2.jpg" alt="Příprava pro inženýrské sítě">
+          <p>Příprava výkopu pro inženýrské sítě, Praha</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/prace3.jpg" alt="Úprava terénu">
+          <p>Úprava terénu a odvodnění, Kladno</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Kopačka.cz – Ruční výkopové práce</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
